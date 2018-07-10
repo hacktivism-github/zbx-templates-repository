@@ -58,7 +58,11 @@ NOTE: Testing good with OA-RAED-21HG HYB and OA-20C-LG
             Gain -1 dB) and Output Power < (Power Limit -1 dB).
             me@zabbix:~$
     
-    
+- Graph prototypes
+
+
+ 
+ 
 
 ## License
 This template is distributed under the terms of the GNU General Public License as published by the Free Software Foundation
