@@ -1,9 +1,8 @@
 # ZBX-INFINERA-XTM-SERIES-MONITORING
 
 ## Optical Amplifiers
-# NOTE: 
+### NOTE: 
 Testing good with OA-RAED-21HG HYB and OA-20C-LG
-
 
 
 ## License
