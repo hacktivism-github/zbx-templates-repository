@@ -32,6 +32,13 @@ Note: Testing good with both [TM-3000/II](https://www.infinera.com/wp-content/up
     - XTM Series | equipmentBoardOperStatus $1
     - XTM Series | equipmentBoardUnderMaintenance $1
 
+## Performance Measurements
+
+- Discovery: XTM Series::PM EthTD::Current Meters and Configuration
+
+    - XTM Series | pmEthTdName $1
+    - XTM Series | Rx Ethernet Traffic Data on $1
+    - XTM Series | Tx Ethernet Traffic Data on $1
 
 ## Optical Amplifiers
 Note: Testing good with OA-RAED-21HG HYB and OA-20C-LG
