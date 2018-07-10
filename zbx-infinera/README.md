@@ -60,7 +60,7 @@ NOTE: Testing good with OA-RAED-21HG HYB and OA-20C-LG
     
 - Graph prototypes
 
-
+![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-07-10%20at%2021.23.49.png "Logo Title Text 1")
  
  
 
