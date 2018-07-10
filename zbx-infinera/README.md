@@ -4,9 +4,16 @@
 Note: Testing good with both [TM-3000/II](https://www.infinera.com/wp-content/uploads/infinera-ds-tm-3000_ii-chassis.pdf) and 
 [TM-301/II](https://www.infinera.com/wp-content/uploads/infinera-ds-tm-301_ii-chassis.pdf)
 
+- Discovery: XTM Series::Equipment Status::Power Supply Status
+
+    - XTM Series | equipmentPowerName $1
+    - XTM Series | equipmentPowerType $1
+    - XTM Series | equipmentPowerOperStatus $1
+    - XTM Series | equipmentPowerDCPowerFailed $1
+    - XTM Series | equipmentPowerDCPowerFailedSeverity $1
 
 ## Optical Amplifiers
-NOTE: Testing good with OA-RAED-21HG HYB and OA-20C-LG
+Note: Testing good with OA-RAED-21HG HYB and OA-20C-LG
 
 - Discovery: XTM Series::Optical Amplifiers
 
