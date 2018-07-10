@@ -28,6 +28,12 @@ NOTE: Testing good with OA-RAED-21HG HYB and OA-20C-LG
             me@zabbix:~$
     
     - oaIfLaserBiasHigh               [5.106] High Laser Bias
+    
+            me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfLaserBiasHigh' | grep "SYNTAX\|DESCR"
+            SYNTAX	INTEGER {ok(1), alarm(2)}
+            DESCRIPTION	"Laser bias high threshold exceeded.
+            me@zabbix:~$
+    
     - oaIfPumpLaserTempLow            [5.224] Pump Laser Temp Low
     - oaIfSaturationFault             [5.8]   Amplifier Saturation alarm
     - oaIfOutputPowerFail             [5.203] Output power failed
