@@ -13,12 +13,12 @@ NOTE: Testing good with OA-RAED-21HG HYB and OA-20C-LG
 
 - Triggers:
 
-    -- oaIfLossOfSignal                [5.160] Loss of Signal
-    -- oaIfReceivedPowerLow            [5.166] Low Received Optical Power
-    -- oaIfLaserBiasHigh               [5.106] High Laser Bias
-    -- oaIfPumpLaserTempLow            [5.224] Pump Laser Temp Low
-    -- oaIfSaturationFault             [5.8]   Amplifier Saturation alarm
-    -- oaIfOutputPowerFail             [5.203] Output power failed
+    - oaIfLossOfSignal                [5.160] Loss of Signal
+    - oaIfReceivedPowerLow            [5.166] Low Received Optical Power
+    - oaIfLaserBiasHigh               [5.106] High Laser Bias
+    - oaIfPumpLaserTempLow            [5.224] Pump Laser Temp Low
+    - oaIfSaturationFault             [5.8]   Amplifier Saturation alarm
+    - oaIfOutputPowerFail             [5.203] Output power failed
     
 
 ## License
