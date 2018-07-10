@@ -1,8 +1,12 @@
 # ZBX-INFINERA-XTM-SERIES-MONITORING
 
 ## Optical Amplifiers
-#### NOTE: 
-Testing good with OA-RAED-21HG HYB and OA-20C-LG
+NOTE: Testing good with OA-RAED-21HG HYB and OA-20C-LG
+
+- Discovery
+..* XTM Series | OA interface $1
+..* XTM Series | OA Operational State for the interface  $1
+..* XTM Series | OA Adminintrative State for the interface  $1
 
 
 ## License
