@@ -2,7 +2,7 @@
 
 ## Equipment Status
 Note: Testing good with both [TM-3000/II](https://www.infinera.com/wp-content/uploads/infinera-ds-tm-3000_ii-chassis.pdf) and 
-[TM-301/II](https://www.infinera.com/wp-content/uploads/infinera-ds-tm-301_ii-chassis.pdf)
+[TM-301/II](https://www.infinera.com/wp-content/uploads/infinera-ds-tm-301_ii-chassis.pdf) Chassis
 
 - Discovery: XTM Series::Equipment Status::Power Supply Status
 
