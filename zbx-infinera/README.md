@@ -21,6 +21,12 @@ NOTE: Testing good with OA-RAED-21HG HYB and OA-20C-LG
             me@zabbix:~$
 
     - oaIfReceivedPowerLow            [5.166] Low Received Optical Power
+    
+            me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfReceivedPowerLow' | grep "SYNTAX\|DESCR"
+            SYNTAX	INTEGER {ok(1), alarm(2)}
+            DESCRIPTION	"Received power level low threshold exceeded.
+            me@zabbix:~$
+    
     - oaIfLaserBiasHigh               [5.106] High Laser Bias
     - oaIfPumpLaserTempLow            [5.224] Pump Laser Temp Low
     - oaIfSaturationFault             [5.8]   Amplifier Saturation alarm
