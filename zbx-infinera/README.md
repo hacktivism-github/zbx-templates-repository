@@ -12,6 +12,27 @@ Note: Testing good with both [TM-3000/II](https://www.infinera.com/wp-content/up
     - XTM Series | equipmentPowerDCPowerFailed $1
     - XTM Series | equipmentPowerDCPowerFailedSeverity $1
 
+- Discovery: XTM Series::Equipment Status::Fan status
+
+    - XTM Series | equipmentFanName $1
+    - XTM Series | equipmentFanOperStatus $1
+    - XTM Series | equipmentFanUnitFailed $1
+    
+- Discovery: XTM Series::Equipment Status::Subrack Status
+
+    - XTM Series | equipmentSubrackName $1
+    - XTM Series | equipmentSubrackOperStatus $1
+    - XTM Series | Equipment Subrack Temperature $1
+    - XTM Series | Equipment Subrack Temperature Threshold $1
+    - XTM Series | equipmentSubrackTempHighExceeded $1
+
+- Discovery: XTM Series::Equipment Status::Board Configuration and Status
+
+    - XTM Series | equipmentBoardName $1
+    - XTM Series | equipmentBoardOperStatus $1
+    - XTM Series | equipmentBoardUnderMaintenance $1
+
+
 ## Optical Amplifiers
 Note: Testing good with OA-RAED-21HG HYB and OA-20C-LG
 
