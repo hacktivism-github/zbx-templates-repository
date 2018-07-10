@@ -1,8 +1,8 @@
 # ZBX-INFINERA-XTM-SERIES-MONITORING
 
 ## Equipment Status
-Note: Testing good with both [TM-3000/II] (https://www.infinera.com/wp-content/uploads/infinera-ds-tm-3000_ii-chassis.pdf) and 
-[TM-301/II] (https://www.infinera.com/wp-content/uploads/infinera-ds-tm-301_ii-chassis.pdf)
+Note: Testing good with both [TM-3000/II](https://www.infinera.com/wp-content/uploads/infinera-ds-tm-3000_ii-chassis.pdf) and 
+[TM-301/II](https://www.infinera.com/wp-content/uploads/infinera-ds-tm-301_ii-chassis.pdf)
 
 
 ## Optical Amplifiers
