@@ -10,6 +10,14 @@ NOTE: Testing good with OA-RAED-21HG HYB and OA-20C-LG
     - XTM Series | OA Adminintrative State for the interface  $1
     - XTM Series | OA Rx power level on $1
     - XTM Series | OA Tx power level on $1
+    - XTM Series | OA Laser Bias High on $1
+    - XTM Series | OA Loss Of Signal on $1
+    - XTM Series | OA Output Power Fail on $1
+    - XTM Series | OA Pump Laser Temp Low on $1
+    - XTM Series | OA Received Power Low on $1
+    - XTM Series | OA Rx Power Level Low Threshold on $1
+    - XTM Series | OA Saturation Fault on $1
+    - XTM Series | OA Tx Power Level Low Threshold on $1
 
 - Triggers:
 
