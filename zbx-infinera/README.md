@@ -27,7 +27,7 @@ Note: Testing good with both [TM-3000/II](https://www.infinera.com/wp-content/up
 
 If the query returns a value other than 1 (ok) it will fire the trigger
 
-
+![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-07-11%20at%2022.17.09.png "Logo Title Text 1")
 
 - Discovery: XTM Series::Equipment Status::Fan status
 
