@@ -111,33 +111,33 @@ Note: Testing good with OA-RAED-21HG HYB and OA-20C-LG
 
             - oaIfLossOfSignal                [5.160] Loss of Signal
         
-                me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfLossOfSignal' | grep "SYNTAX\|DESCR"
-                SYNTAX	INTEGER {ok(1), alarm(2)}
-                DESCRIPTION	"Loss of signal.
-                me@zabbix:~$
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfLossOfSignal' | grep "SYNTAX\|DESCR"
+                    SYNTAX	INTEGER {ok(1), alarm(2)}
+                    DESCRIPTION	"Loss of signal.
+                    me@zabbix:~$
 
-    - oaIfReceivedPowerLow            [5.166] Low Received Optical Power
+            - oaIfReceivedPowerLow            [5.166] Low Received Optical Power
     
-                me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfReceivedPowerLow' | grep "SYNTAX\|DESCR"
-                SYNTAX	INTEGER {ok(1), alarm(2)}
-                DESCRIPTION	"Received power level low threshold exceeded.
-                me@zabbix:~$
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfReceivedPowerLow' | grep "SYNTAX\|DESCR"
+                    SYNTAX	INTEGER {ok(1), alarm(2)}
+                    DESCRIPTION	"Received power level low threshold exceeded.
+                    me@zabbix:~$
     
-    - oaIfLaserBiasHigh               [5.106] High Laser Bias
+            - oaIfLaserBiasHigh               [5.106] High Laser Bias
     
-                me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfLaserBiasHigh' | grep "SYNTAX\|DESCR"
-                SYNTAX	INTEGER {ok(1), alarm(2)}
-                DESCRIPTION	"Laser bias high threshold exceeded.
-                me@zabbix:~$
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfLaserBiasHigh' | grep "SYNTAX\|DESCR"
+                    SYNTAX	INTEGER {ok(1), alarm(2)}
+                    DESCRIPTION	"Laser bias high threshold exceeded.
+                    me@zabbix:~$
     
-    - oaIfPumpLaserTempLow            [5.224] Pump Laser Temp Low
+            - oaIfPumpLaserTempLow            [5.224] Pump Laser Temp Low
     
-                me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfPumpLaserTempLow' | grep "SYNTAX\|DESCR"
-                SYNTAX	INTEGER {ok(1), alarm(2)}
-                DESCRIPTION	"Pump laser temperature too low.
-                me@zabbix:~$
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfPumpLaserTempLow' | grep "SYNTAX\|DESCR"
+                    SYNTAX	INTEGER {ok(1), alarm(2)}
+                    DESCRIPTION	"Pump laser temperature too low.
+                    me@zabbix:~$
     
-    - oaIfSaturationFault            [5.8]   Amplifier Saturation alarm
+            - oaIfSaturationFault            [5.8]   Amplifier Saturation alarm
     
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfSaturationFault' | grep "SYNT\|DESCR\|Gain\|attr"
                     SYNTAX	INTEGER {ok(1), alarm(2)}
@@ -146,7 +146,7 @@ Note: Testing good with OA-RAED-21HG HYB and OA-20C-LG
                     the wanted gain attribute.
                     me@zabbix:~$
     
-    - oaIfOutputPowerFail             [5.203] Output power failed
+            - oaIfOutputPowerFail             [5.203] Output power failed
     
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfOutputPowerFail' | grep      "SYNT\|DESC\|Gain"
                     SYNTAX	INTEGER {ok(1), alarm(2)}
