@@ -58,6 +58,19 @@ If the query returns a value other than 1 (ok) it will fire the trigger
     - XTM Series | Equipment Subrack Temperature $1
     - XTM Series | Equipment Subrack Temperature Threshold $1
     - XTM Series | equipmentSubrackTempHighExceeded $1
+    
+        - Triggers:
+        
+                me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentSubrackTempHighExceeded' | grep "TEX\|SYNT\|DESC"
+                -- TEXTUAL CONVENTION FaultStatus
+                SYNTAX	INTEGER {ok(1), alarm(2)}
+                DESCRIPTION	"The threshold for environmental temperature
+                me@zabbix:~$
+
+![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-07-11%20at%2023.13.48.png "Logo Title Text 1")
+
+![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-07-11%20at%2023.11.48.png "Logo Title Text 1")
+
 
 - Discovery: XTM Series::Equipment Status::Board Configuration and Status
 
