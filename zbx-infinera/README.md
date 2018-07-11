@@ -1,5 +1,7 @@
 # ZBX-INFINERA-XTM-SERIES-MONITORING
 
+![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-07-11%20at%2023.42.55.png "Logo Title Text 1")
+
 ## Equipment Status
 Note: Testing good with both [TM-3000/II](https://www.infinera.com/wp-content/uploads/infinera-ds-tm-3000_ii-chassis.pdf) and 
 [TM-301/II](https://www.infinera.com/wp-content/uploads/infinera-ds-tm-301_ii-chassis.pdf) Chassis
