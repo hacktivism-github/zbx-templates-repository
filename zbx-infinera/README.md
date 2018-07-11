@@ -91,6 +91,21 @@ If the query returns a value other than 1 (ok) it will fire the trigger
     - XTM Series | equipmentBoardName $1
     - XTM Series | equipmentBoardOperStatus $1
     - XTM Series | equipmentBoardUnderMaintenance $1
+    
+        - Triggers:
+
+            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.23            [5.23]   Board Under Maintenance
+
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardUnderMaintenance' | grep "TEX\|SYN\|DESC\|service\|Admin"
+                    -- TEXTUAL CONVENTION FaultStatus
+                    SYNTAX	INTEGER {ok(1), alarm(2)}
+                    DESCRIPTION	"The board is undergoing maintenance, adminStatus
+                    is set to service.
+                    A: AdminStatus is set to service.
+                    D: AdminStatus is set to another value.
+                    me@zabbix:~$
+
+If the query returns a value other than 1 (ok) it will fire the trigger
 
 ## Performance Measurements
 
