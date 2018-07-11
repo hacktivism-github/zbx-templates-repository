@@ -20,15 +20,17 @@ Note: Testing good with both [TM-3000/II](https://www.infinera.com/wp-content/up
     
         - Triggers:
 
-                me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentPowerACPowerFailed' | grep "TEX\|SYNT\|DESC"
-                -- TEXTUAL CONVENTION FaultStatus
-                SYNTAX	INTEGER {ok(1), alarm(2)}
-                DESCRIPTION	"AC power supply failed (230 V).
-                me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentPowerDCPowerFailed' | grep "TEX\|SYNT\|DESC"
-                -- TEXTUAL CONVENTION AlarmPerceivedSeverity
-                SYNTAX	INTEGER {undefined(0), cleared(1), indeterminate(2), warning(3), minor(4), major(5), critical(6)}
-                DESCRIPTION	"The severity of DC Power failed alarm.
-                me@zabbix:~$
+            - OID: 1.3.6.1.4.1.8708.2.11.2.4.1.1.14            [5.60]   DC Power Supply Failed
+
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentPowerACPowerFailed' | grep "TEX\|SYNT\|DESC"
+                    -- TEXTUAL CONVENTION FaultStatus
+                    SYNTAX	INTEGER {ok(1), alarm(2)}
+                    DESCRIPTION	"AC power supply failed (230 V).
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentPowerDCPowerFailed' | grep "TEX\|SYNT\|DESC"
+                    -- TEXTUAL CONVENTION AlarmPerceivedSeverity
+                    SYNTAX	INTEGER {undefined(0), cleared(1), indeterminate(2), warning(3), minor(4), major(5), critical(6)}
+                    DESCRIPTION	"The severity of DC Power failed alarm.
+                    me@zabbix:~$
 
 If the query returns a value other than 1 (ok) it will fire the trigger
 
@@ -43,12 +45,14 @@ If the query returns a value other than 1 (ok) it will fire the trigger
     - XTM Series | equipmentFanUnitFailed $1
 
         - Triggers:
-            
-                me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentFanUnitFailed' | grep "TEX\|SYNT\|DESC"
-                -- TEXTUAL CONVENTION FaultStatus
-                SYNTAX	INTEGER {ok(1), alarm(2)}
-                DESCRIPTION	"The fan module has failed or is absent.
-                me@zabbix:~$
+        
+            - OID: 1.3.6.1.4.1.8708.2.11.2.5.1.1.9            [5.87]   Fan Unit Failed        
+        
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentFanUnitFailed' | grep "TEX\|SYNT\|DESC"
+                    -- TEXTUAL CONVENTION FaultStatus
+                    SYNTAX	INTEGER {ok(1), alarm(2)}
+                    DESCRIPTION	"The fan module has failed or is absent.
+                    me@zabbix:~$
             
 If the query returns a value other than 1 (ok) it will fire the trigger
 
@@ -66,12 +70,14 @@ If the query returns a value other than 1 (ok) it will fire the trigger
     - XTM Series | equipmentSubrackTempHighExceeded $1
     
         - Triggers:
-        
-                me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentSubrackTempHighExceeded' | grep "TEX\|SYNT\|DESC"
-                -- TEXTUAL CONVENTION FaultStatus
-                SYNTAX	INTEGER {ok(1), alarm(2)}
-                DESCRIPTION	"The threshold for environmental temperature
-                me@zabbix:~$
+
+            - OID: 1.3.6.1.4.1.8708.2.11.2.2.1.1.12            [5.116]   High Subrack Temp
+
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentSubrackTempHighExceeded' | grep "TEX\|SYNT\|DESC"
+                    -- TEXTUAL CONVENTION FaultStatus
+                    SYNTAX	INTEGER {ok(1), alarm(2)}
+                    DESCRIPTION	"The threshold for environmental temperature
+                    me@zabbix:~$
 
 If the query returns a value other than 1 (ok) it will fire the trigger
 
