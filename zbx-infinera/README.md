@@ -1,5 +1,9 @@
 # ZBX-INFINERA-XTM-SERIES-MONITORING
 
+This template have been splitted in to what the zabbix developers designate by "Application" in order to have all items grouped together within their function
+
+The "Applications" are as follows:
+
 ![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-07-11%20at%2023.42.55.png "Logo Title Text 1")
 
 ## Equipment Status
