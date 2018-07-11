@@ -109,7 +109,7 @@ Note: Testing good with OA-RAED-21HG HYB and OA-20C-LG
 
         - Triggers:
 
-    - oaIfLossOfSignal                [5.160] Loss of Signal
+        - oaIfLossOfSignal                [5.160] Loss of Signal
         
                 me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfLossOfSignal' | grep "SYNTAX\|DESCR"
                 SYNTAX	INTEGER {ok(1), alarm(2)}
