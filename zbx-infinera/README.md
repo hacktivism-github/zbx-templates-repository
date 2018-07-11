@@ -12,7 +12,7 @@ Note: Testing good with both [TM-3000/II](https://www.infinera.com/wp-content/up
     - XTM Series | equipmentPowerDCPowerFailed $1
     - XTM Series | equipmentPowerDCPowerFailedSeverity $1
     
-- Triggers:
+        - Triggers:
 
         me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentPowerACPowerFailed' | grep "TEX\|SYNT\|DESC"
         -- TEXTUAL CONVENTION FaultStatus
