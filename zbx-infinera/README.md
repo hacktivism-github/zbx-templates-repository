@@ -92,12 +92,18 @@ If the query returns a value other than 1 (ok) it will fire the trigger
     - XTM Series | equipmentBoardOperStatus $1
     - XTM Series | equipmentBoardUnderMaintenance $1
     - XTM Series | High Board Temperature on $1
+    - XTM Series | CU-SFP/II | Communication Failure on $1
+    - XTM Series | Equipment Board Temp Threshold on $1
+    - XTM Series | Equipment Board Temp Low Threshold on $1
+    - XTM Series | Secondary DC Power Failed on $1
+    
     
         - Triggers:
             
             - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.23            [5.23]   Board Under Maintenance
             - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.17            [5.105]  High Board Temp
-            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.18            [5.47]   Communication Failure             
+            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.18            [5.47]   Communication Failure
+            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.20            [5.274]  Secondary DC Power Failed            
 
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardUnderMaintenance' | grep "TEX\|SYN\|DESC\|service\|Admin"
                     -- TEXTUAL CONVENTION FaultStatus
@@ -121,6 +127,19 @@ If the query returns a value other than 1 (ok) it will fire the trigger
                     A: There is a board present but there has been
                     no communication established within 20 seconds.
                     D: Communication is established.
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardSecondaryPowerFailed' | grep "TEX\|SYN\|DESC\|A:\|failed\|D:\|Note\|likely\|instead"
+                    -- TEXTUAL CONVENTION FaultStatus
+                    SYNTAX	INTEGER {ok(1), alarm(2)}
+                    DESCRIPTION	"Secondary DC power (1.8 or 2.5 V) failure.
+                    A: The secondary DC power on the board has
+                    failed.
+                    D: The secondary DC power is present.
+                    Note: If primary power fails a
+                    'communicationFailure' alarm will most likely
+                    be raised instead.
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardTempThreshold' | grep "DESCR\|DEFVAL"
+                    DESCRIPTION	"The threshold for temperature alarm on the
+                    DEFVAL	{ 700 }
                     me@zabbix:~$
                
                     
