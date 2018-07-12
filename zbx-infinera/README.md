@@ -94,7 +94,7 @@ If the query returns a value other than 1 (ok) it will fire the trigger
     - XTM Series | High Board Temperature on $1
     
         - Triggers:
-
+            
             - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.23            [5.23]   Board Under Maintenance
 
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardUnderMaintenance' | grep "TEX\|SYN\|DESC\|service\|Admin"
@@ -107,17 +107,16 @@ If the query returns a value other than 1 (ok) it will fire the trigger
                     me@zabbix:~$
 
 If the query returns a value other than 1 (ok) it will fire the trigger
-
-   - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.17            [5.105]   High Board Temp
+             - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.17            [5.105]   High Board Temp
             
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardTempHighExceeded' | grep "TEX\|SYN\|DESC\|exceeded\|A:\|D:"
-    -- TEXTUAL CONVENTION FaultStatus
-    SYNTAX	INTEGER {ok(1), alarm(2)}
-    DESCRIPTION	"The threshold for environmental temperature
-        on the board is exceeded.
-        A: The temperature exceeds the associated
-        D: Temperature is 0.5 degrees centigrade
-    me@zabbix:~$
+                -- TEXTUAL CONVENTION FaultStatus
+                SYNTAX	INTEGER {ok(1), alarm(2)}
+                DESCRIPTION	"The threshold for environmental temperature
+                on the board is exceeded.
+                A: The temperature exceeds the associated
+                D: Temperature is 0.5 degrees centigrade
+                me@zabbix:~$
 
 ## Performance Measurements
 
