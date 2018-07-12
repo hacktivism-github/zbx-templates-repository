@@ -96,12 +96,14 @@ If the query returns a value other than 1 (ok) it will fire the trigger
     - XTM Series | Equipment Board Temp Threshold on $1
     - XTM Series | Equipment Board Temp Low Threshold on $1
     - XTM Series | Secondary DC Power Failed on $1
+    - XTM Series | Equipment Board Temp Low on $1
+    - XTM Series | Equipment Board Temp Very High on $1
     
     
         - Triggers:
             
             - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.23            [5.23]   Board Under Maintenance
-            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.17            [5.105]  High Board Temp
+            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.17            [5.105]  High Board Temp (Exceeded the Threshold)
             - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.18            [5.47]   Communication Failure
             - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.20            [5.274]  Secondary DC Power Failed            
 
@@ -137,12 +139,8 @@ If the query returns a value other than 1 (ok) it will fire the trigger
                     Note: If primary power fails a
                     'communicationFailure' alarm will most likely
                     be raised instead.
-                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardTempThreshold' | grep "DESCR\|DEFVAL"
-                    DESCRIPTION	"The threshold for temperature alarm on the
-                    DEFVAL	{ 700 }
-                    me@zabbix:~$
                
-                    
+![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-07-12%20at%2021.45.38.png "Logo Title Text 1")                    
 
 ## Performance Measurements
 
