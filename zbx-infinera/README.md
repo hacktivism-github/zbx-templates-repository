@@ -97,6 +97,7 @@ If the query returns a value other than 1 (ok) it will fire the trigger
             
             - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.23            [5.23]   Board Under Maintenance
             - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.17            [5.105]  High Board Temp
+            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.18            [5.47]   Communication Failure             
 
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardUnderMaintenance' | grep "TEX\|SYN\|DESC\|service\|Admin"
                     -- TEXTUAL CONVENTION FaultStatus
@@ -105,9 +106,6 @@ If the query returns a value other than 1 (ok) it will fire the trigger
                     is set to service.
                     A: AdminStatus is set to service.
                     D: AdminStatus is set to another value.
-                    me@zabbix:~$
-
-            
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardTempHighExceeded' | grep "TEX\|SYN\|DESC\|exceeded\|A:\|D:"
                     -- TEXTUAL CONVENTION FaultStatus
                     SYNTAX	INTEGER {ok(1), alarm(2)}
@@ -116,6 +114,17 @@ If the query returns a value other than 1 (ok) it will fire the trigger
                     A: The temperature exceeds the associated
                     D: Temperature is 0.5 degrees centigrade
                     me@zabbix:~$
+                    me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardCommunicationFailure' | grep "TEX\|SYN\|DESC\|completely\|A:\|20\|D:"
+                    -- TEXTUAL CONVENTION FaultStatus
+                    SYNTAX	INTEGER {ok(1), alarm(2)}
+                    DESCRIPTION	"Communication between the control unit and the
+                    the board has failed completely.
+                    A: There is a board present but there has been
+                    no communication established within 20 seconds.
+                    D: Communication is established.
+                    me@zabbix:~$
+               
+                    
 
 ## Performance Measurements
 
