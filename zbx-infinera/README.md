@@ -113,7 +113,6 @@ If the query returns a value other than 1 (ok) it will fire the trigger
                     on the board is exceeded.
                     A: The temperature exceeds the associated
                     D: Temperature is 0.5 degrees centigrade
-                    me@zabbix:~$
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardCommunicationFailure' | grep "TEX\|SYN\|DESC\|completely\|A:\|20\|D:"
                     -- TEXTUAL CONVENTION FaultStatus
                     SYNTAX	INTEGER {ok(1), alarm(2)}
