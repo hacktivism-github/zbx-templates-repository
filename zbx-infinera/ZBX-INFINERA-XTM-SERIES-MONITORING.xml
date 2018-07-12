@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2018-07-10T21:13:56Z</date>
+    <date>2018-07-12T20:40:45Z</date>
     <groups>
         <group>
             <name>ZBX-INFINERA-TEMPLATES</name>
@@ -1022,14 +1022,106 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                     <description/>
                     <item_prototypes>
                         <item_prototype>
+                            <name>XTM Series | CU-SFP/II | Communication Failure on $1</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>LUM-EQUIPMENT-MIB::equipmentBoardCommunicationFailure.{#SNMPINDEX}</snmp_oid>
+                            <key>equipmentBoardCommunicationFailure[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>14</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>1</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>XTM Series::Equipment Status</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>TM-3000/II Chassis | GENERIC for 1(ok) 2 (alarm) cases</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XTM Series | Equipment Board Low Temp on $1</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>LUM-EQUIPMENT-MIB::equipmentBoardLowTemperature.{#SNMPINDEX}</snmp_oid>
+                            <key>equipmentBoardLowTemperature[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>14</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>1</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>XTM Series::Equipment Status</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>TM-3000/II Chassis | GENERIC for 1(ok) 2 (alarm) cases</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
                             <name>XTM Series | equipmentBoardName $1</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
                             <snmp_oid>LUM-EQUIPMENT-MIB::equipmentBoardName.{#SNMPINDEX}</snmp_oid>
                             <key>equipmentBoardName[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>14</history>
+                            <delay>86400</delay>
+                            <history>7</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
@@ -1112,6 +1204,276 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
+                            <name>XTM Series | Secondary DC Power Failed on $1</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>LUM-EQUIPMENT-MIB::equipmentBoardSecondaryPowerFailed.{#SNMPINDEX}</snmp_oid>
+                            <key>equipmentBoardSecondaryPowerFailed[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>14</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>1</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>XTM Series::Equipment Status</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>TM-3000/II Chassis | GENERIC for 1(ok) 2 (alarm) cases</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XTM Series | High Board Temperature on $1</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>LUM-EQUIPMENT-MIB::equipmentBoardTempHighExceeded.{#SNMPINDEX}</snmp_oid>
+                            <key>equipmentBoardTempHighExceeded[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>14</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>1</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>XTM Series::Equipment Status</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>TM-3000/II Chassis | GENERIC for 1(ok) 2 (alarm) cases</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XTM Series | Equipment Board Temp Low Threshold on $1</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>1</multiplier>
+                            <snmp_oid>LUM-EQUIPMENT-MIB::equipmentBoardTempLowThreshold.{#SNMPINDEX}</snmp_oid>
+                            <key>equipmentBoardTempLowThreshold[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>14</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>degC</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>0.1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>XTM Series::Equipment Status</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XTM Series | Equipment Board Temp Low on $1</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>1</multiplier>
+                            <snmp_oid>LUM-EQUIPMENT-MIB::equipmentBoardTempLow.{#SNMPINDEX}</snmp_oid>
+                            <key>equipmentBoardTempLow[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>14</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>degC</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>0.1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>XTM Series::Equipment Status</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XTM Series | Equipment Board Temp Threshold on $1</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>1</multiplier>
+                            <snmp_oid>LUM-EQUIPMENT-MIB::equipmentBoardTempThreshold.{#SNMPINDEX}</snmp_oid>
+                            <key>equipmentBoardTempThreshold[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>14</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>degC</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>0.1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>XTM Series::Equipment Status</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>XTM Series | Equipment Board Temp Very High on $1</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>LUM-EQUIPMENT-MIB::equipmentBoardTempVeryHigh.{#SNMPINDEX}</snmp_oid>
+                            <key>equipmentBoardTempVeryHigh[{#SNMPVALUE}]</key>
+                            <delay>300</delay>
+                            <history>14</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>1</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>XTM Series::Equipment Status</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>TM-3000/II Chassis | GENERIC for 1(ok) 2 (alarm) cases</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
                             <name>XTM Series | equipmentBoardUnderMaintenance $1</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
@@ -1169,6 +1531,56 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                             <type>0</type>
                             <dependencies/>
                         </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:equipmentBoardCommunicationFailure[{#SNMPVALUE}].last(#1)}&lt;&gt;1</expression>
+                            <name>[] CU SFP/II Communication Failure with {#SNMPVALUE}</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <dependencies/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:equipmentBoardTempVeryHigh[{#SNMPVALUE}].last(#1)}&lt;&gt;1</expression>
+                            <name>[] Equipment Board Temperature Very High on {#SNMPVALUE}</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <dependencies/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:equipmentBoardTempHighExceeded[{#SNMPVALUE}].last(#1)}&lt;&gt;1</expression>
+                            <name>[] High Board Temperature on {#SNMPVALUE}</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <dependencies/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:equipmentBoardLowTemperature[{#SNMPVALUE}].last(#1)}&lt;&gt;1</expression>
+                            <name>[] Low Board Temperature on {#SNMPVALUE}</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description/>
+                            <type>0</type>
+                            <dependencies/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:equipmentBoardSecondaryPowerFailed[{#SNMPVALUE}].last(#1)}&lt;&gt;1</expression>
+                            <name>[] Secondary DC Power Failed on {#SNMPVALUE}</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <dependencies/>
+                        </trigger_prototype>
                     </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
@@ -1213,8 +1625,8 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                             <multiplier>0</multiplier>
                             <snmp_oid>LUM-EQUIPMENT-MIB::equipmentFanName.{#SNMPINDEX}</snmp_oid>
                             <key>equipmentFanName[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>14</history>
+                            <delay>86400</delay>
+                            <history>7</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
@@ -1675,8 +2087,8 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                             <multiplier>0</multiplier>
                             <snmp_oid>LUM-EQUIPMENT-MIB::equipmentSubrackName.{#SNMPINDEX}</snmp_oid>
                             <key>equipmentSubrackName[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>14</history>
+                            <delay>86400</delay>
+                            <history>7</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
@@ -1713,7 +2125,7 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>XTM Series | equipmentSubrackOperStatus $1</name>
+                            <name>XTM Series | equipmentSubrackOperStatus on $1</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
@@ -1759,7 +2171,7 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>XTM Series | equipmentSubrackTempHighExceeded $1</name>
+                            <name>XTM Series | equipmentSubrackTempHighExceeded on $1</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>0</multiplier>
@@ -1805,7 +2217,7 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>XTM Series | Equipment Subrack Temperature Threshold $1</name>
+                            <name>XTM Series | Equipment Subrack Temperature Threshold on $1</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>1</multiplier>
@@ -1849,7 +2261,7 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>XTM Series | Equipment Subrack Temperature $1</name>
+                            <name>XTM Series | Equipment Subrack Temperature on $1</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>1</multiplier>
