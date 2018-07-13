@@ -150,6 +150,11 @@ If the query returns a value other than 1 (ok) it will fire the trigger
     - XTM Series | Rx Ethernet Traffic Data on $1
     - XTM Series | Tx Ethernet Traffic Data on $1
 
+        - Graph prototypes
+
+![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-07-13%20at%2021.21.01.png "Logo Title Text 1")
+
+
 ## Optical Amplifiers
 Note: Testing good with OA-RAED-21HG HYB and OA-20C-LG
 
