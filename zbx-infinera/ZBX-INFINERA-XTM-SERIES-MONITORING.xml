@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2018-07-13T19:41:06Z</date>
+    <date>2018-07-14T15:01:01Z</date>
     <groups>
         <group>
             <name>ZBX-INFINERA-TEMPLATES</name>
@@ -574,7 +574,7 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                     <trigger_prototypes>
                         <trigger_prototype>
                             <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:clientIfReceivedPowerLow[{#SNMPVALUE}].last(#1)}&lt;&gt;1 and {ZBX-INFINERA-XTM-SERIES-MONITORING:clientIfDescr[{#SNMPVALUE}].str(this_does_not_exist)}=0</expression>
-                            <name>[10.002] EMXP240/IIE | Low Rx Optical Power on {#SNMPVALUE}</name>
+                            <name>[10.002] EMXP240/IIE | Low Rx Optical Power on {#SNMPVALUE} : {ITEM.VALUE2}</name>
                             <url/>
                             <status>0</status>
                             <priority>2</priority>
@@ -979,18 +979,20 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:dcnIfReceivedPowerHigh[{#SNMPVALUE}].last(#1)}&lt;&gt;1</expression>
-                            <name>[10.002] CU SFP/II | High Rx Optical Power on {#SNMPVALUE}</name>
+                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:dcnIfReceivedPowerHigh[{#SNMPVALUE}].last(#1)}&lt;&gt;1 and&#13;
+{ZBX-INFINERA-XTM-SERIES-MONITORING:dcnIfDescr[{#SNMPVALUE}].str(this_does_not_exist)}=0</expression>
+                            <name>[10.002] CU SFP/II | High Rx Optical Power on {#SNMPVALUE} : {ITEM.VALUE2}</name>
                             <url/>
                             <status>0</status>
-                            <priority>2</priority>
+                            <priority>4</priority>
                             <description/>
                             <type>0</type>
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:dcnIfReceivedPowerLow[{#SNMPVALUE}].last(#1)}&lt;&gt;1</expression>
-                            <name>[10.002] CU SFP/II | Low Rx Optical Power on {#SNMPVALUE}</name>
+                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:dcnIfReceivedPowerLow[{#SNMPVALUE}].last(#1)}&lt;&gt;1 and&#13;
+{ZBX-INFINERA-XTM-SERIES-MONITORING:dcnIfDescr[{#SNMPVALUE}].str(this_does_not_exist)}=0</expression>
+                            <name>[10.002] CU SFP/II | Low Rx Optical Power on {#SNMPVALUE} : {ITEM.VALUE2}</name>
                             <url/>
                             <status>0</status>
                             <priority>2</priority>
@@ -1075,52 +1077,6 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                             <multiplier>0</multiplier>
                             <snmp_oid>LUM-EQUIPMENT-MIB::equipmentBoardCommunicationFailure.{#SNMPINDEX}</snmp_oid>
                             <key>equipmentBoardCommunicationFailure[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>14</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>1</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>XTM Series::Equipment Status</name>
-                                </application>
-                            </applications>
-                            <valuemap>
-                                <name>TM-3000/II Chassis | GENERIC for 1(ok) 2 (alarm) cases</name>
-                            </valuemap>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>XTM Series | Equipment Board Low Temp on $1</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>LUM-EQUIPMENT-MIB::equipmentBoardLowTemperature.{#SNMPINDEX}</snmp_oid>
-                            <key>equipmentBoardLowTemperature[{#SNMPVALUE}]</key>
                             <delay>300</delay>
                             <history>14</history>
                             <trends>0</trends>
@@ -1604,16 +1560,6 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                             <url/>
                             <status>0</status>
                             <priority>4</priority>
-                            <description/>
-                            <type>0</type>
-                            <dependencies/>
-                        </trigger_prototype>
-                        <trigger_prototype>
-                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:equipmentBoardLowTemperature[{#SNMPVALUE}].last(#1)}&lt;&gt;1</expression>
-                            <name>[] Low Board Temperature on {#SNMPVALUE}</name>
-                            <url/>
-                            <status>0</status>
-                            <priority>1</priority>
                             <description/>
                             <type>0</type>
                             <dependencies/>
@@ -2368,12 +2314,12 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
-                    <name>XTM Series::Metro Ethernet Services information</name>
+                    <name>XTM Series::Metro Ethernet Services</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},mesErrorPropName]</snmp_oid>
                     <key>mesErrorPropName</key>
-                    <delay>300</delay>
+                    <delay>30</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2400,50 +2346,6 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                     <lifetime>14</lifetime>
                     <description/>
                     <item_prototypes>
-                        <item_prototype>
-                            <name>XTM Series | MES Error Propagation Description $1</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>LUM-MES-MIB::mesErrorPropDescr.{#SNMPINDEX}</snmp_oid>
-                            <key>mesErrorPropDescr[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>14</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>4</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>XTM Series::Metro Ethernet Services info</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
                         <item_prototype>
                             <name>XTM Series | MES Error Propagation Fault on $1</name>
                             <type>4</type>
@@ -2490,55 +2392,11 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                             <logtimefmt/>
                             <application_prototypes/>
                         </item_prototype>
-                        <item_prototype>
-                            <name>XTM Series | MES Error Propagation Name $1</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>LUM-MES-MIB::mesErrorPropName.{#SNMPINDEX}</snmp_oid>
-                            <key>mesErrorPropName[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>14</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>1</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>XTM Series::Metro Ethernet Services info</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
                             <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:mesErrorPropFault[{#SNMPVALUE}].last(#1)}&lt;&gt;1</expression>
-                            <name>[] Error Propagation Active on {#SNMPVALUE}</name>
+                            <name>[10.005] EMXP240/IIE | Error Propagation Active on {#SNMPVALUE}</name>
                             <url/>
                             <status>0</status>
                             <priority>2</priority>
@@ -3473,7 +3331,7 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                     <trigger_prototypes/>
                     <graph_prototypes>
                         <graph_prototype>
-                            <name>Rx/Tx Ethernet Traffic Data on: {#SNMPVALUE} | {{HOSTNAME}:pmEthTdName[{#SNMPVALUE}].last(0)}</name>
+                            <name>Rx/Tx Ethernet Traffic Data on: {#SNMPVALUE}</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
