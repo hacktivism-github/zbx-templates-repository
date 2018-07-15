@@ -20,7 +20,7 @@ Note: Testing good with both [TM-3000/II](https://www.infinera.com/wp-content/up
     
         - Triggers:
 
-            - OID: 1.3.6.1.4.1.8708.2.11.2.4.1.1.14            [5.60]   DC Power Supply Failed
+            - OID: 1.3.6.1.4.1.8708.2.11.2.4.1.1.14            |   DC Power Supply Failed
 
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentPowerACPowerFailed' | grep "TEX\|SYNT\|DESC"
                     -- TEXTUAL CONVENTION FaultStatus
@@ -46,7 +46,7 @@ If the query returns a value other than 1 (ok) it will fire the trigger
 
         - Triggers:
         
-            - OID: 1.3.6.1.4.1.8708.2.11.2.5.1.1.9            [5.87]   Fan Unit Failed        
+            - OID: 1.3.6.1.4.1.8708.2.11.2.5.1.1.9            |   Fan Unit Failed        
         
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentFanUnitFailed' | grep "TEX\|SYNT\|DESC"
                     -- TEXTUAL CONVENTION FaultStatus
@@ -71,7 +71,7 @@ If the query returns a value other than 1 (ok) it will fire the trigger
     
         - Triggers:
 
-            - OID: 1.3.6.1.4.1.8708.2.11.2.2.1.1.12            [5.116]   High Subrack Temp
+            - OID: 1.3.6.1.4.1.8708.2.11.2.2.1.1.12            |   High Subrack Temp
 
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentSubrackTempHighExceeded' | grep "TEX\|SYNT\|DESC"
                     -- TEXTUAL CONVENTION FaultStatus
@@ -102,10 +102,10 @@ If the query returns a value other than 1 (ok) it will fire the trigger
     
         - Triggers:
             
-            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.23            [5.23]   Board Under Maintenance
-            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.17            [5.105]  High Board Temp (Exceeded the Threshold)
-            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.18            [5.47]   Communication Failure
-            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.20            [5.274]  Secondary DC Power Failed            
+            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.23            |  Board Under Maintenance
+            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.17            |  High Board Temp (Exceeded the Threshold)
+            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.18            |  Communication Failure
+            - OID: 1.3.6.1.4.1.8708.2.11.2.3.1.1.20            |  Secondary DC Power Failed            
 
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-EQUIPMENT-MIB.txt -Td -Ib 'equipmentBoardUnderMaintenance' | grep "TEX\|SYN\|DESC\|service\|Admin"
                     -- TEXTUAL CONVENTION FaultStatus
@@ -178,35 +178,35 @@ Note: Testing good with OA-RAED-21HG HYB and OA-20C-LG
 
         - Triggers:
 
-            - oaIfLossOfSignal                [5.160] Loss of Signal
+            - oaIfLossOfSignal                | Loss of Signal
         
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfLossOfSignal' | grep "SYNTAX\|DESCR"
                     SYNTAX	INTEGER {ok(1), alarm(2)}
                     DESCRIPTION	"Loss of signal.
                     me@zabbix:~$
 
-            - oaIfReceivedPowerLow            [5.166] Low Received Optical Power
+            - oaIfReceivedPowerLow            | Low Received Optical Power
     
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfReceivedPowerLow' | grep "SYNTAX\|DESCR"
                     SYNTAX	INTEGER {ok(1), alarm(2)}
                     DESCRIPTION	"Received power level low threshold exceeded.
                     me@zabbix:~$
     
-            - oaIfLaserBiasHigh               [5.106] High Laser Bias
+            - oaIfLaserBiasHigh               | High Laser Bias
     
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfLaserBiasHigh' | grep "SYNTAX\|DESCR"
                     SYNTAX	INTEGER {ok(1), alarm(2)}
                     DESCRIPTION	"Laser bias high threshold exceeded.
                     me@zabbix:~$
     
-            - oaIfPumpLaserTempLow            [5.224] Pump Laser Temp Low
+            - oaIfPumpLaserTempLow            | Pump Laser Temp Low
     
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfPumpLaserTempLow' | grep "SYNTAX\|DESCR"
                     SYNTAX	INTEGER {ok(1), alarm(2)}
                     DESCRIPTION	"Pump laser temperature too low.
                     me@zabbix:~$
     
-            - oaIfSaturationFault            [5.8]   Amplifier Saturation alarm
+            - oaIfSaturationFault            |   Amplifier Saturation alarm
     
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfSaturationFault' | grep "SYNT\|DESCR\|Gain\|attr"
                     SYNTAX	INTEGER {ok(1), alarm(2)}
@@ -215,7 +215,7 @@ Note: Testing good with OA-RAED-21HG HYB and OA-20C-LG
                     the wanted gain attribute.
                     me@zabbix:~$
     
-            - oaIfOutputPowerFail             [5.203] Output power failed
+            - oaIfOutputPowerFail             | Output power failed
     
                     me@zabbix:~$ snmptranslate -m /usr/share/snmp/mibs/LUM-OA-MIB.txt -Td -Ib 'oaIfOutputPowerFail' | grep      "SYNT\|DESC\|Gain"
                     SYNTAX	INTEGER {ok(1), alarm(2)}
