@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2018-07-15T20:47:15Z</date>
+    <date>2018-07-16T15:23:59Z</date>
     <groups>
         <group>
             <name>ZBX-INFINERA-TEMPLATES</name>
@@ -3074,6 +3074,16 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
+                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:oaIfLossOfSignal[{#SNMPVALUE}].last(#1)}&lt;&gt;1 and {ZBX-INFINERA-XTM-SERIES-MONITORING:oaIfDescr[{#SNMPVALUE}].str(this_does_not_exist)}=0</expression>
+                            <name>[10.003] OA2 LG 20/20C | Loss of Signal on interface {#SNMPVALUE} : {ITEM.VALUE2}</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <dependencies/>
+                        </trigger_prototype>
+                        <trigger_prototype>
                             <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:oaIfSaturationFault[{#SNMPVALUE}].last(#1)}&lt;&gt;1</expression>
                             <name>[] OA Amplifier Saturation alarm on {#SNMPVALUE}</name>
                             <url/>
@@ -3096,16 +3106,6 @@ The lowest power that the receiver is guaranteed to handle, in units of 0.1 dBm.
                         <trigger_prototype>
                             <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:oaIfOperStatus[{#SNMPVALUE}].last(#1)}&lt;&gt;3</expression>
                             <name>[] OA interface {#SNMPVALUE} changed its Operational state to DOWN</name>
-                            <url/>
-                            <status>0</status>
-                            <priority>4</priority>
-                            <description/>
-                            <type>0</type>
-                            <dependencies/>
-                        </trigger_prototype>
-                        <trigger_prototype>
-                            <expression>{ZBX-INFINERA-XTM-SERIES-MONITORING:oaIfLossOfSignal[{#SNMPVALUE}].last(#1)}&lt;&gt;1</expression>
-                            <name>[] OA Loss of Signal on {#SNMPVALUE}</name>
                             <url/>
                             <status>0</status>
                             <priority>4</priority>
