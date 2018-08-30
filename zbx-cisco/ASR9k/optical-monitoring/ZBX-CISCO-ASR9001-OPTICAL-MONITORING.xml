@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2018-08-30T11:07:26Z</date>
+    <date>2018-08-30T20:11:31Z</date>
     <groups>
         <group>
             <name>ZBX-CISCO-TEMPLATES</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>ZBX-CISCO-IOS-XR-OPTICAL-MONITORING</template>
-            <name>ZBX-CISCO-IOS-XR-OPTICAL-MONITORING</name>
+            <template>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</template>
+            <name>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</name>
             <description/>
             <groups>
                 <group>
@@ -30,7 +30,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},ENTITY-MIB::entPhysicalName]</snmp_oid>
                     <key>entPhysicalName</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -61,7 +61,7 @@
                             </condition>
                         </conditions>
                     </filter>
-                    <lifetime>3</lifetime>
+                    <lifetime>7</lifetime>
                     <description>ENTITY-MIB::entPhysicalDescr (.1.3.6.1.2.1.47.1.1.1.1.2)&#13;
 &#13;
 ENTITY-MIB::entPhysicalName (.1.3.6.1.2.1.47.1.1.1.1.7)&#13;
@@ -75,7 +75,7 @@ A textual description of physical entity.  This object should contain a string t
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.2</snmp_oid>
                             <key>entSensorThresholdRxValueHighWarn[{#SNMPVALUE}]</key>
-                            <delay>30</delay>
+                            <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -119,7 +119,7 @@ A textual description of physical entity.  This object should contain a string t
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.4</snmp_oid>
                             <key>entSensorThresholdRxValueHigh[{#SNMPVALUE}]</key>
-                            <delay>30</delay>
+                            <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -167,7 +167,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.1</snmp_oid>
                             <key>entSensorThresholdRxValueLowWarn[{#SNMPVALUE}]</key>
-                            <delay>30</delay>
+                            <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -211,7 +211,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.3</snmp_oid>
                             <key>entSensorThresholdRxValueLow[{#SNMPVALUE}]</key>
-                            <delay>30</delay>
+                            <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -255,7 +255,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.2</snmp_oid>
                             <key>entSensorThresholdTxValueHighWarn[{#SNMPVALUE}]</key>
-                            <delay>30</delay>
+                            <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -299,7 +299,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.4</snmp_oid>
                             <key>entSensorThresholdTxValueHigh[{#SNMPVALUE}]</key>
-                            <delay>30</delay>
+                            <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -347,7 +347,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.1</snmp_oid>
                             <key>entSensorThresholdTxValueLowWarn[{#SNMPVALUE}]</key>
-                            <delay>30</delay>
+                            <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -391,7 +391,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.3</snmp_oid>
                             <key>entSensorThresholdTxValueLow[{#SNMPVALUE}]</key>
-                            <delay>30</delay>
+                            <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -435,7 +435,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <multiplier>1</multiplier>
                             <snmp_oid>CISCO-ENTITY-SENSOR-MIB::entSensorValue.{#SNMPINDEX}</snmp_oid>
                             <key>entSensorValue[{#SNMPVALUE}]</key>
-                            <delay>30</delay>
+                            <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -475,7 +475,7 @@ However, you can directly compare entSensorValue with the threshold values given
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorThresholdRxValueHigh[{#SNMPVALUE}].last(0)}</expression>
+                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueHigh[{#SNMPVALUE}].last(0)}</expression>
                             <name>[10.001] High signal ALARM for {#SNMPVALUE}</name>
                             <url/>
                             <status>0</status>
@@ -485,7 +485,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorThresholdRxValueHigh[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)} and {ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorThresholdRxValueHighWarn[{#SNMPVALUE}].last(0)}</expression>
+                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueHigh[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)} and {ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueHighWarn[{#SNMPVALUE}].last(0)}</expression>
                             <name>[10.001] High signal WARNING for {#SNMPVALUE}</name>
                             <url/>
                             <status>0</status>
@@ -495,7 +495,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&lt;{ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorThresholdRxValueLow[{#SNMPVALUE}].last(0)}</expression>
+                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&lt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueLow[{#SNMPVALUE}].last(0)}</expression>
                             <name>[10.001] Low signal ALARM for {#SNMPVALUE}</name>
                             <url/>
                             <status>0</status>
@@ -505,7 +505,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorThresholdRxValueLowWarn[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)} and {ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-IOS-XR-OPTICAL-MONITORING:entSensorThresholdRxValueLow[{#SNMPVALUE}].last(0)}</expression>
+                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueLowWarn[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)} and {ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueLow[{#SNMPVALUE}].last(0)}</expression>
                             <name>[10.001] Low signal WARNING for {#SNMPVALUE}</name>
                             <url/>
                             <status>0</status>
@@ -515,7 +515,88 @@ However, you can directly compare entSensorValue with the threshold values given
                             <dependencies/>
                         </trigger_prototype>
                     </trigger_prototypes>
-                    <graph_prototypes/>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>{#SNMPVALUE}</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>2</drawtype>
+                                    <color>1A7C11</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</host>
+                                        <key>entSensorValue[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>2</drawtype>
+                                    <color>F63100</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</host>
+                                        <key>entSensorThresholdRxValueHigh[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <drawtype>2</drawtype>
+                                    <color>F63100</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</host>
+                                        <key>entSensorThresholdRxValueLow[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>3</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>FF8000</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</host>
+                                        <key>entSensorThresholdRxValueHighWarn[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>4</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>FF8000</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</host>
+                                        <key>entSensorThresholdRxValueLowWarn[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
             </discovery_rules>
