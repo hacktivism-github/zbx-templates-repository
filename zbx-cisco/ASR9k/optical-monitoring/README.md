@@ -8,6 +8,18 @@ All the items will reside on the so called Application by the name of "IOS-XR Op
 
 ![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-08-30%20at%2015.10.56.png "Logo Title Text 1")
 
+- Discovery Rule:
+
+discovery[{#SNMPVALUE},ENTITY-MIB::entPhysicalName]
+
+- Filters:
+![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-08-30%20at%2015.31.39.png "Logo Title Text 1")
+
+![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-08-30%20at%2015.32.18.png "Logo Title Text 1")
+
+
+
+
 ## License
 This template is distributed under the terms of the GNU General Public License as published by the Free Software Foundation
 
