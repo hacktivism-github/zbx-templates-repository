@@ -20,6 +20,11 @@ Regular Expression:
 
 by: Vanilson Carvalho
 
+- Triggers:
+
+![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-08-30%20at%2015.48.38.png "Logo Title Text 1")
+
+
 
 
 
