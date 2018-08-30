@@ -12,10 +12,13 @@ All the items will reside on the so called Application by the name of "IOS-XR Op
 
 discovery[{#SNMPVALUE},ENTITY-MIB::entPhysicalName]
 
-- Filters:
+Filters:
 ![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-08-30%20at%2015.31.39.png "Logo Title Text 1")
 
+Regular Expression:
 ![alt text](https://github.com/hacktivism-github/zbx-templates-repository/blob/master/images/Screen%20Shot%202018-08-30%20at%2015.32.18.png "Logo Title Text 1")
+
+by: Vanilson Carvalho
 
 
 
