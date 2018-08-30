@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2018-08-30T20:11:31Z</date>
+    <date>2018-08-30T21:02:44Z</date>
     <groups>
         <group>
             <name>ZBX-CISCO-TEMPLATES</name>
@@ -74,7 +74,7 @@ A textual description of physical entity.  This object should contain a string t
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.2</snmp_oid>
-                            <key>entSensorThresholdRxValueHighWarn[{#SNMPVALUE}]</key>
+                            <key>entSensorThresholdRxTxValueHighWarn[{#SNMPVALUE}]</key>
                             <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
@@ -118,7 +118,7 @@ A textual description of physical entity.  This object should contain a string t
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.4</snmp_oid>
-                            <key>entSensorThresholdRxValueHigh[{#SNMPVALUE}]</key>
+                            <key>entSensorThresholdRxTxValueHigh[{#SNMPVALUE}]</key>
                             <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
@@ -166,7 +166,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.1</snmp_oid>
-                            <key>entSensorThresholdRxValueLowWarn[{#SNMPVALUE}]</key>
+                            <key>entSensorThresholdRxTxValueLowWarn[{#SNMPVALUE}]</key>
                             <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
@@ -210,187 +210,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <multiplier>1</multiplier>
                             <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.3</snmp_oid>
-                            <key>entSensorThresholdRxValueLow[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>7</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>0</value_type>
-                            <allowed_hosts/>
-                            <units>mW</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>0.001</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>IOS-XR Optical Monitoring</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Thresholds::$1 | Warning High</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>1</multiplier>
-                            <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.2</snmp_oid>
-                            <key>entSensorThresholdTxValueHighWarn[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>7</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>0</value_type>
-                            <allowed_hosts/>
-                            <units>mW</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>0.001</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>IOS-XR Optical Monitoring</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Thresholds::$1 | Alarm High</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>1</multiplier>
-                            <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.4</snmp_oid>
-                            <key>entSensorThresholdTxValueHigh[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>7</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>0</value_type>
-                            <allowed_hosts/>
-                            <units>mW</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>0.001</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description>This variable indicates the value of the threshold.&#13;
-&#13;
-To correctly display or interpret this variable's value, you must also know entSensorType, entSensorScale, and entSensorPrecision.&#13;
-&#13;
-However, you can directly compare entSensorValue with the threshold values given in entSensorThresholdTable without any semantic knowledge.</description>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>IOS-XR Optical Monitoring</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Thresholds::$1 | Warning Low</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>1</multiplier>
-                            <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.1</snmp_oid>
-                            <key>entSensorThresholdTxValueLowWarn[{#SNMPVALUE}]</key>
-                            <delay>300</delay>
-                            <history>7</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>0</value_type>
-                            <allowed_hosts/>
-                            <units>mW</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>0.001</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>IOS-XR Optical Monitoring</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Thresholds::$1 | Alarm Low</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>1</multiplier>
-                            <snmp_oid>entSensorThresholdValue.{#SNMPINDEX}.3</snmp_oid>
-                            <key>entSensorThresholdTxValueLow[{#SNMPVALUE}]</key>
+                            <key>entSensorThresholdRxTxValueLow[{#SNMPVALUE}]</key>
                             <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
@@ -475,7 +295,7 @@ However, you can directly compare entSensorValue with the threshold values given
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueHigh[{#SNMPVALUE}].last(0)}</expression>
+                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxTxValueHigh[{#SNMPVALUE}].last(0)}</expression>
                             <name>[10.001] High signal ALARM for {#SNMPVALUE}</name>
                             <url/>
                             <status>0</status>
@@ -485,7 +305,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueHigh[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)} and {ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueHighWarn[{#SNMPVALUE}].last(0)}</expression>
+                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxTxValueHigh[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)} and {ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxTxValueHighWarn[{#SNMPVALUE}].last(0)}</expression>
                             <name>[10.001] High signal WARNING for {#SNMPVALUE}</name>
                             <url/>
                             <status>0</status>
@@ -495,7 +315,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&lt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueLow[{#SNMPVALUE}].last(0)}</expression>
+                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&lt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxTxValueLow[{#SNMPVALUE}].last(0)}</expression>
                             <name>[10.001] Low signal ALARM for {#SNMPVALUE}</name>
                             <url/>
                             <status>0</status>
@@ -505,7 +325,7 @@ However, you can directly compare entSensorValue with the threshold values given
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueLowWarn[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)} and {ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxValueLow[{#SNMPVALUE}].last(0)}</expression>
+                            <expression>{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxTxValueLowWarn[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)} and {ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorValue[{#SNMPVALUE}].last(0)}&gt;{ZBX-CISCO-ASR9001-OPTICAL-MONITORING:entSensorThresholdRxTxValueLow[{#SNMPVALUE}].last(0)}</expression>
                             <name>[10.001] Low signal WARNING for {#SNMPVALUE}</name>
                             <url/>
                             <status>0</status>
@@ -555,7 +375,7 @@ However, you can directly compare entSensorValue with the threshold values given
                                     <type>0</type>
                                     <item>
                                         <host>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</host>
-                                        <key>entSensorThresholdRxValueHigh[{#SNMPVALUE}]</key>
+                                        <key>entSensorThresholdRxTxValueHigh[{#SNMPVALUE}]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -567,7 +387,7 @@ However, you can directly compare entSensorValue with the threshold values given
                                     <type>0</type>
                                     <item>
                                         <host>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</host>
-                                        <key>entSensorThresholdRxValueLow[{#SNMPVALUE}]</key>
+                                        <key>entSensorThresholdRxTxValueLow[{#SNMPVALUE}]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -579,7 +399,7 @@ However, you can directly compare entSensorValue with the threshold values given
                                     <type>0</type>
                                     <item>
                                         <host>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</host>
-                                        <key>entSensorThresholdRxValueHighWarn[{#SNMPVALUE}]</key>
+                                        <key>entSensorThresholdRxTxValueHighWarn[{#SNMPVALUE}]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -591,7 +411,7 @@ However, you can directly compare entSensorValue with the threshold values given
                                     <type>0</type>
                                     <item>
                                         <host>ZBX-CISCO-ASR9001-OPTICAL-MONITORING</host>
-                                        <key>entSensorThresholdRxValueLowWarn[{#SNMPVALUE}]</key>
+                                        <key>entSensorThresholdRxTxValueLowWarn[{#SNMPVALUE}]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
